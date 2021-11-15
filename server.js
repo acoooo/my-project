@@ -5,4 +5,4 @@ app.get('/', (req, res) => {
   res.send("Hi")
 })
 
-app.listen(PORT)
+app.listen(PORT,() => console.log(`Running on port ${PORT}`));
