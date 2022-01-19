@@ -19,6 +19,7 @@ pipeline {
         stage('Stop the previously run container'){
             steps{
                 sh 'docker ps --filter publish=3333 -q | xargs --no-run-if-empty docker container stop'
+                sh 'docker ps --filter publish=3333 -q | xargs --no-run-if-empty docker container rm'
             }
         }
         
